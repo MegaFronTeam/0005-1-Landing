@@ -10,13 +10,11 @@
 	// 	background-color: red;
 
 	// }
-	&.fixed {
-		position: fixed;
-		width: 100%;
-		left: 0;
-		top: 0;
-		z-index: 999;
-	}
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 999;
 	.row {
 		align-items: center;
 	}
