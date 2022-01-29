@@ -2,8 +2,17 @@ mixin sConsult(data)
 	// start sConsult
 	+b.SECTION.sConsult.section#sConsult&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sConsult
-				
 			.row
+				.col-lg-6
+					+b.section-title
+						h2 Необходима консультация?
+						p Просто оставьте ваш телефон и мы свяжемся с вами
+					+form-wrap
+						+e.input-wrap.form-group.input-btn-inner
+							+e.INPUT.input.form-control(name='text' type='text' placeholder='Введите телефон')
+							button(type='submit')
+								span Отправить
+						+policy
+				.col-lg-6.d-flex.order-lg-first
+					+pic('form-img.png', '', 0)
 	// end sConsult

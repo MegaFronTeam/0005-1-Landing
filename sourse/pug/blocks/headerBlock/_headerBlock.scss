@@ -1,20 +1,24 @@
 // start .headerBlock
 .headerBlock {
+	padding-top: calc(var(--sPT) + 60.8px);
+	@include media-breakpoint-up(lg) {
+		padding-top: calc(var(--sPT) + 69.5px);
+	}
+
+	min-height: calc(var(--vh, 1vh) * 100);
+}
+.sConsult,
+.headerBlock {
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
 	display: flex;
 	align-items: center;
-	padding-top: calc(var(--sPT) + 60.8px);
-	@include media-breakpoint-up(lg) {
-		padding-top: calc(var(--sPT) + 69.5px);
-	}
 	@include media-breakpoint-only(lg) {
 		--sTPB: #{rem(20)};
 	}
 	// margin-bottom: 1px;
 	// min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
 
@@ -45,6 +49,11 @@
 	}
 	picture {
 		margin-top: auto;
+		img{
+			@include media-breakpoint-up(xxl)  {
+				max-width: none;
+			}
+		}
 	}
 	p {
 		line-height: 175%;
