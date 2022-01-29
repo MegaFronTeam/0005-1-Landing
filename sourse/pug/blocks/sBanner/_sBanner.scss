@@ -1,0 +1,84 @@
+// start .sBanner
+.sBanner {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	--sTPB: 20px;
+	@include media-breakpoint-up(md) {
+		--sTPB: 40px;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-image: linear-gradient(90deg, rgba(30, 30, 30, 0.6) 0%, rgba(30, 30, 30, 0.6) 100%);
+		z-index: -1;
+		@include media-breakpoint-up(lg) {
+			background-image: linear-gradient(90deg, rgba(30, 30, 30, 0.8) 0%, rgba(30, 30, 30, 0) 83.85%);
+		}
+	}
+	
+	.section-title {
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+		h2 {
+			color: $white;
+		}
+	}
+	&__col {
+		max-width: calc(530px + var(--bs-gutter-x));
+	}
+	p {
+		text-align: center;
+		color: #fdfbf9;
+		line-height: 175%;
+		margin-bottom: 20px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 40px;
+			line-height: 150%;
+			text-align: left;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__discount {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+		}
+		img {
+			width: 40px;
+			height: 40px;
+			margin-bottom: 10px;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+				margin-right: 10px;
+			}
+		}
+		p {
+			font-weight: 600;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sBanner
