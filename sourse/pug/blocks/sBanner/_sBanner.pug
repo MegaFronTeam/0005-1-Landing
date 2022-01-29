@@ -1,0 +1,14 @@
+mixin sBanner(data)
+	// start sBanner
+	+b.SECTION.sBanner.section.bg-wrap#sBanner&attributes(attributes)
+		+pic('sBanner-bg.jpg', 'bg').picture-bg
+		.container
+			.row
+				+e.col.col
+					+b.section-title--border
+						h2 Уже работаете с&nbsp;программами&nbsp;1С?
+					p Если вы&nbsp;уже работаете с&nbsp;программами 1С&nbsp;и&nbsp;являетесь компанией-субъектом малого или среднего предпринимательства, вы&nbsp;также можете работать в&nbsp;облачной версии 1С&nbsp;по&nbsp;льготной цене.
+					+e.discount
+						img(src="img/svg/check-mark.svg", alt="")
+						p.mb-0 Обратитесь к&nbsp;вашему обслуживающему партнёру для получения скидки.
+	// end sBanner
