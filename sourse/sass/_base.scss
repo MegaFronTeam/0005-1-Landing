@@ -126,6 +126,28 @@ body {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	&--border{
+		h2{
+			&::after{
+				content: '';
+				display: block;
+				background-color: #df2d2d;
+				width: 60px;
+				height: 4px;
+				@include media-breakpoint-up(md) {
+
+					margin-top: rem(40);
+					margin-bottom: rem(40);
+				}
+				margin-top: rem(20);
+				margin-bottom: rem(20);
+				@include media-breakpoint-down(md) {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
 }
 
 
