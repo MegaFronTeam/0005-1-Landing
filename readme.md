@@ -1,1 +1,1 @@
-1. <https://megafronteam.github.io/0005-1SLanding/public>
+1. <https://megafronteam.github.io/0005-1CLanding/public>
