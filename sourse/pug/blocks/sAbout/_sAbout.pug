@@ -2,8 +2,14 @@ mixin sAbout(data)
 	// start sAbout
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAbout
-				
-			.row
+			+b.section-title--border.text-center
+				h2 О&nbsp;проекте &laquo;Цифровые технологии&raquo;
+			.row.align-items-center
+				.col-lg-7.col-xl-6
+					p Федеральный проект &laquo;Цифровые технологии&raquo; позволяет компаниям МСП использовать программное обеспечение для автоматизации бизнес-процессов, повышения производительности труда и&nbsp;снижения издержек по&nbsp;льготной цене. Скидка&nbsp;50% обеспечивается Министерством цифрового развития&nbsp;РФ и&nbsp;Российским фондом развития информационных технологий.
+				.col-lg-5.col-xl-6.order-lg-first
+					+e.images
+						+pic('sAbout-1.png', '', 0)
+						+pic('sAbout-2.png', '', 0)
+						+pic('sAbout-3.png', '', 0)
 	// end sAbout
