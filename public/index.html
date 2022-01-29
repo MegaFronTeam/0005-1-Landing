@@ -108,7 +108,11 @@
 							<div class="form-wrap">
 								<form>
 									<div class="form-wrap__input-wrap form-group input-btn-inner"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите ИНН компании"/>
-										<button type="submit"><span>Проверить</span></button>
+										<button type="submit"><span>Проверить</span>
+											<svg class="icon icon-chevron-right ">
+												<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+											</svg>
+										</button>
 									</div>
 									<p>Проверьте, доступна&nbsp;ли вашей компании скидка&nbsp;50%</p>
 								</form>
@@ -259,7 +263,11 @@
 							<div class="form-wrap">
 								<form>
 									<div class="form-wrap__input-wrap form-group input-btn-inner"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите телефон"/>
-										<button type="submit"><span>Отправить</span></button>
+										<button type="submit"><span>Отправить</span>
+											<svg class="icon icon-chevron-right ">
+												<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+											</svg>
+										</button>
 									</div>
 									<div class="form-wrap__policy">
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text">Я&nbsp;согласен на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;<a class="text-secondary" href="#">Условиями</a>.</small>
@@ -283,10 +291,41 @@
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+						<div class="col-lg-auto">
+							<a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
+							</a>
+						</div>
+						<div class="col-lg-auto">
+							<div class="footer__logo-caption">Официальный партнер 1С в&nbsp;Самаре
+							</div>
+						</div>
+						<div class="col-lg-auto order-lg-5">
+							<div class="footer__contacts"><a href="tel:+78463004840">+7 (846) 300 48 40</a><span>Пн-Пт 9:00&nbsp;&minus; 18:00</span>
+							</div>
+						</div>
+						<div class="col-lg-auto order-lg-4">
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-viber ">
+										<use xlink:href="img/svg/sprite.svg#viber"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg text-center order-lg-3">
+							<a class="footer__policy" href="#">Политика конфиденциальности
+							</a>
+						</div>
 					</div>
 				</div>
 			</footer>

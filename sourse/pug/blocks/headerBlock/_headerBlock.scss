@@ -46,6 +46,9 @@
 				@include rfs(40px);
 			}
 		}
+		p {
+			max-width: 38em;
+		}
 	}
 	picture {
 		margin-top: auto;
@@ -74,9 +77,12 @@
 		}
 		.input-btn-inner {
 			margin-bottom: rem(30);
-			max-width: 515px;
+			max-width: 420px;
 			margin-left: auto;
 			margin-right: auto;
+			@include media-breakpoint-up(sm) {
+				max-width: 515px;
+			}
 			@include media-breakpoint-up(md) {
 				margin-left: 0;
 				margin-right: 0;
@@ -209,7 +215,10 @@
 	position: relative;
 
 	.form-control {
-		padding: rem(25) calc(39% + rem(20)) rem(25) rem(20);
+		padding: rem(25) rem(70) rem(25) rem(20);
+		@include media-breakpoint-up(sm) {
+			padding: rem(25) calc(39% + rem(20)) rem(25) rem(20);
+		}
 		border: none;
 		& + button {
 			@extend .btn, .btn-primary;
@@ -218,7 +227,23 @@
 			transform: translateY(-50%);
 			right: rem(5);
 			left: auto;
-			width: 39%;
+			outline: none;
+			box-shadow: none !important;
+			@include media-breakpoint-up(sm) {
+				width: 39%;
+			}
+			span {
+				display: none;
+				@include media-breakpoint-up(sm) {
+					display: block;
+				}
+			}
+			.icon {
+				font-size: 16px;
+				@include media-breakpoint-up(sm) {
+					display: none;
+				}
+			}
 		}
 	}
 }

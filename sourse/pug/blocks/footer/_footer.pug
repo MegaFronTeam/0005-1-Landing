@@ -2,8 +2,16 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+				.col-lg-auto
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col-lg-auto
+					+e.logo-caption Официальный партнер 1С в&nbsp;Самаре
+				.col-lg-auto.order-lg-5
+					+e.contacts
+						a(href="tel:+78463004840") +7 (846) 300 48 40
+						span Пн-Пт 9:00&nbsp;&minus; 18:00
+				.col-lg-auto.order-lg-4
+					+soc()
+				.col-lg.text-center.order-lg-3
+					+e.policy(href="#") Политика конфиденциальности
