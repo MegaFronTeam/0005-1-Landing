@@ -42,6 +42,9 @@
 				@include rfs(40px);
 			}
 		}
+		p {
+			max-width: 38em;
+		}
 	}
 	picture {
 		margin-top: auto;
@@ -215,6 +218,8 @@
 			transform: translateY(-50%);
 			right: rem(5);
 			left: auto;
+			outline: none;
+			box-shadow: none !important;
 			@include media-breakpoint-up(sm) {
 				width: 39%;
 			}
