@@ -46,9 +46,9 @@
 			max-width: 38em;
 		}
 	}
-	picture {
-		margin-top: auto;
-	}
+	// picture {
+	// 	margin-top: auto;
+	// }
 	p {
 		line-height: 175%;
 		@include media-breakpoint-between(lg, xxl) {
