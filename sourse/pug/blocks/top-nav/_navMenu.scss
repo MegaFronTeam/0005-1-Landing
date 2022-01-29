@@ -87,9 +87,9 @@
 	.menu-mobile {
 		position: fixed !important;
 		z-index: 999;
-		max-width: 88%;
+		max-width: 100%;
 		height: calc(var(--vh, 1vh) * 100);
-		width: 300px;
+		width: 360px;
 		top: 0;
 		// left: 0;
 		right: 0;
@@ -105,20 +105,20 @@
 		will-change: transform;
 
 		.toggle-menu-mobile {
-			margin-left: -10%;
+			// margin-left: -10%;
 			position: absolute;
-			left: 0;
-			right: auto;
+			left: auto;
+			right: rem(20);
 			color: #fff;
-			top: 10px;
+			top: rem(15);
 			z-index: 9999;
 			span:after,
 			span:before {
-				--color: #ffffff;
+				--color: #{$secondary};
 			}
 		}
 		&__inner {
-			padding: rem(20) 0;
+			padding: rem(50) 0 rem(20);
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;

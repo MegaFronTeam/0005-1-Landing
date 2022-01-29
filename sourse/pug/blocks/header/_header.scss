@@ -1,9 +1,9 @@
 // start .header
 .header {
-	height: 60.8;
-	@include media-breakpoint-up(lg) {
-		height: 69.5px;
-	}
+	// height: 60.8;
+	// @include media-breakpoint-up(lg) {
+	// 	height: 69.5px;
+	// }
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
