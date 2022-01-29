@@ -1,43 +1,137 @@
 .footer {
-		
+	padding-top: 60px;
+	padding-bottom: 40px;
 	margin-top: auto;
+	background-color: $white;
+	text-align: center;
+	@include media-breakpoint-up(lg) {
+		text-align: left;
+		padding-top: rem(40);
+		padding-bottom: rem(40);
+	}
+	.row {
+		align-items: center;
+	}
+	&__logo {
+		display: block;
+		max-width: 138px;
+		// padding: 18px 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
 
-// 
-@include media-breakpoint-up(xl) {}
+		img {
+			max-width: 100%;
+		}
+	}
+	&__logo-caption {
+		font-size: 12px;
+		line-height: calc(18 / 12);
+		color: $secondary;
+		margin-bottom: 20px;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+			max-width: 14em;
+		}
+	}
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		a {
+			display: inline-block;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: calc(22 / 18);
+			color: $body-color;
+			margin-bottom: 20px;
+			@include media-breakpoint-up(lg) {
+				padding: 0;
+				margin-bottom: 5px;
+			}
+			&:hover {
+				color: $primary;
+			}
+		}
+		span {
+			display: inline-block;
+			font-size: 12px;
+			line-height: calc(15 / 12);
+			color: $secondary;
+			margin-bottom: 20px;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+				padding: 0;
+			}
+		}
+	}
+	&__policy {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 125%;
+		color: $body-color;
+		&:hover {
+			color: $primary;
+		}
+	}
+	.soc {
+		justify-content: center;
+		margin-bottom: 20px;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+	}
+	//
+	@include media-breakpoint-up(xl) {
+	}
 
-@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(md) {
+	}
 
-@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-up(xs) {
+	}
 
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
+	@include media-breakpoint-only(sm) {
+	}
 
-// 
-@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(md) {
+	}
 
-@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(xl) {
+	}
 
-@include media-breakpoint-only(lg) {}
+	//
+	@include media-breakpoint-down(xl) {
+	}
 
-@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(lg) {
+	}
 
+	@include media-breakpoint-down(md) {
+	}
 
-// 
-@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+	}
 
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(xs) {
+	}
 }
