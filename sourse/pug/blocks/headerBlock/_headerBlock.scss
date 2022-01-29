@@ -3,9 +3,14 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	display: flex;
+	align-items: center;
 	padding-top: calc(var(--sPT) + 60.8px);
 	@include media-breakpoint-up(lg) {
 		padding-top: calc(var(--sPT) + 69.5px);
+	}
+	@include media-breakpoint-only(lg) {
+		--sTPB: #{rem(20)};
 	}
 	// margin-bottom: 1px;
 	// min-height: 100vh;
@@ -21,8 +26,21 @@
 	// 	margin-bottom: 1px;
 	// }
 	.section-title {
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
 		h1 {
 			margin-bottom: rem(30);
+			@include media-breakpoint-only(lg) {
+				margin-bottom: rem(20);
+			}
+			@include media-breakpoint-between(lg, xxl) {
+				@include rfs(34px);
+			}
+			@include media-breakpoint-down(sm) {
+				@include rfs(40px);
+			}
 		}
 	}
 	picture {
@@ -30,14 +48,45 @@
 	}
 	p {
 		line-height: 175%;
+		@include media-breakpoint-between(lg, xxl) {
+			font-size: rem(14);
+		}
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 	.form-wrap {
-		margin-bottom: rem(60);
+		margin-bottom: 40px;
+		@include media-breakpoint-up(xxl) {
+			margin-bottom: rem(60);
+		}
+		@include media-breakpoint-only(lg) {
+			margin-bottom: rem(20);
+		}
 		.input-btn-inner {
 			margin-bottom: rem(30);
+			max-width: 515px;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(md) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@include media-breakpoint-up(lg) {
+				max-width: 550px;
+			}
+			@include media-breakpoint-only(lg) {
+				margin-bottom: rem(20);
+			}
+		}
+		p {
+			font-size: rem(16);
+			color: $danger;
+			font-weight: 600;
+			text-align: center;
+			@include media-breakpoint-up(md) {
+				text-align: left;
+			}
 		}
 	}
 	&__footer {
@@ -51,11 +100,13 @@
 			padding: 3.1%;
 		}
 		.row {
+			--bs-gutter-x: #{(rem(20))};
 			--bs-gutter-y: var(--bs-gutter-x);
 			justify-content: center;
 			align-items: center;
 		}
 		p {
+			font-size: rem(16);
 			max-width: 32.5em;
 			text-align: center;
 			margin-left: auto;
@@ -72,15 +123,22 @@
 	}
 	&__icon {
 		position: relative;
-		width: rem(50);
-		height: rem(50);
+		width: rem(30);
+		height: rem(30);
 		border-radius: 50%;
 		background-color: $primary;
 		margin-left: auto;
 		margin-right: auto;
+		@include media-breakpoint-up(lg) {
+			width: rem(50);
+			height: rem(50);
+		}
 		.icon {
 			@include a-cent;
-			font-size: rem(24);
+			font-size: rem(15);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(24);
+			}
 		}
 	}
 
@@ -140,7 +198,7 @@
 
 .input-btn-inner {
 	position: relative;
-	max-width: 550px;
+
 	.form-control {
 		padding: rem(25) calc(39% + rem(20)) rem(25) rem(20);
 		border: none;

@@ -5,7 +5,7 @@ mixin headerBlock()
 			.row
 				.col-lg-6
 					+b.section-title
-						h1 Только до 27 декабря! Программы 1С в облаке 
+						h1 Только до 27 декабря! <br> Программы 1С в облаке <br>
 							span.text-danger со скидкой 50%
 						p Повысить производительность, автоматизировать бизнес-процессы, управлять бизнесом и&nbsp;вести учёт помогут программы&nbsp;1С
 					+form-wrap
@@ -13,7 +13,7 @@ mixin headerBlock()
 							+e.INPUT.input.form-control(name='text' type='text' placeholder='Введите ИНН компании')
 							button(type='submit')
 								span Проверить
-						.text-danger.fw-600 Проверьте, доступна&nbsp;ли вашей компании скидка&nbsp;50%
+						p Проверьте, доступна&nbsp;ли вашей компании скидка&nbsp;50%
 				.col-lg-6.d-flex
 					+pic('headerBlock-1.png', '', 0)
 			+e.footer
