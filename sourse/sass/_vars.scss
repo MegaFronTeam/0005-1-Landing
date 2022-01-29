@@ -681,7 +681,7 @@ $form-color-width: 3rem !default;
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
-$form-check-input-width: 1em !default;
+$form-check-input-width: 1.5em !default;
 $form-check-min-height: $font-size-base * $line-height-base !default;
 $form-check-padding-start: $form-check-input-width + 0.5em !default;
 $form-check-margin-bottom: 0.125rem !default;
@@ -704,7 +704,7 @@ $form-check-input-checked-color: $danger !default;
 $form-check-input-checked-bg-color: $white !default;
 // $form-check-input-checked-bg-color: $component-active-bg !default;
 $form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
-$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2_613)'%3E%3Cpath d='M11.8291 2.46026L11.2734 1.90459C11.0444 1.67568 10.6708 1.67568 10.4399 1.90459L4.61316 7.73326L1.56088 4.68099C1.33198 4.45206 0.958255 4.45206 0.727377 4.68099L0.171681 5.23666C-0.057227 5.46559 -0.057227 5.83929 0.171681 6.07016L4.19445 10.0929C4.3099 10.2083 4.45858 10.267 4.60925 10.267C4.75992 10.267 4.91056 10.2083 5.02407 10.0929L11.8232 3.29379C12.058 3.06097 12.058 2.68922 11.8291 2.46026Z' fill='%23DF2D2D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2_613'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color: $component-active-color !default;

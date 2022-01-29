@@ -1,18 +1,9 @@
-// start .sConsult
-.sConsult {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-		
-		min-height: 1px;
-		padding-top: var(--sPT);
-		padding-bottom: 0;
-		.form-wrap__input-wrap{
+// start .sAccordion
+.sAccordion {
+	// --sPB: #{rem(49)};
+	background-color: #fff; 
 
-		}
-		.col-lg-6.d-flex{
-			justify-content: center;
-		}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -20,4 +11,4 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-} // end.sConsult
+} // end.sAccordion

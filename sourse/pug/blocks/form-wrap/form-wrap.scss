@@ -1,4 +1,10 @@
 .form-wrap{
+	&__policy{
+		max-width: rem(550);
+		small{
+			font-size: 12px;
+		}
+	}
  	&__input-wrap{
 			// @extend .form-group;
 			

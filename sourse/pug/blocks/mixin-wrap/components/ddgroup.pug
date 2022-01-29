@@ -4,15 +4,18 @@ mixin ddGroup()
 		if block
 			block
 		else
-			+ddGroupItem('вопрос1', 'active')
-			+ddGroupItem('вопрос2')
-			+ddGroupItem('вопрос3')
+			+ddGroupItem('Как определить, что мне доступна льгота?')
+			+ddGroupItem('ИНН моей компании не найден в Реестре МСП')
+			+ddGroupItem('Как приобрести программы “1С” со скидкой?')
+			+ddGroupItem('Сколько это стоит?')
+			+ddGroupItem('Я забыл свой логин или пароль. Что делать?')
 
-mixin ddGroupItem(txt, activeClasses='')
+mixin ddGroupItem(t , activeClasses='')
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
-	+e.item(class=activeClasses)
-		+e.head.dd-head-js=txt
+	+b.accordion-item(class=activeClasses)
+		+e.head.dd-head-js= t
+			+e.icon
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block

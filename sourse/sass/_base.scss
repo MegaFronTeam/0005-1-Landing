@@ -126,6 +126,28 @@ body {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	&--border{
+		h2{
+			&::after{
+				content: '';
+				display: block;
+				background-color: #df2d2d;
+				width: 60px;
+				height: 4px;
+				@include media-breakpoint-up(md) {
+
+					margin-top: rem(40);
+					margin-bottom: rem(40);
+				}
+				margin-top: rem(20);
+				margin-bottom: rem(20);
+				@include media-breakpoint-down(md) {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
 }
 
 
@@ -486,4 +508,71 @@ iframe {
 .swiper-wrapper{
 	
 	// @include row-sw(10px, sm, 100px);
+}
+
+
+
+
+
+.accordion-item{
+	background: #F4F4F4;
+	border-radius: 12px;
+	--imgS: #{rem(80)};
+	border: 1px solid #F4F4F4;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(640);
+margin-bottom: 10px;
+overflow: hidden;
+	&__head{
+		font-size: 16px;
+		font-weight: bold;
+		position: relative;
+		padding: rem(20);
+		padding-right: rem(40);
+		cursor: pointer;
+		position: relative;
+	
+		&.active{
+			--angle: -180deg;
+			--angle2: -90deg;
+		}
+	}
+	&__icon{
+		width: rem(18);
+		height: rem(18);
+		position: absolute;
+		right: rem(20);
+		top: rem(22);
+		&::before,
+		&::after{
+			content: '';
+			width: rem(18);
+			height: 1px;
+			background: #DF2D2D;
+			@include a-cent1;
+			@include mt(1s);
+		}
+		&::before{
+			transform: translate3d(-50%,-50%,0) rotate(calc(90deg - var(--angle2, 90deg))); 
+		}
+		&::after{
+			transform: translate3d(-50%,-50%,0) rotate(var(--angle, 90deg)); 
+		}
+	}
+	&__content{
+		background-color: #fff;
+		padding: 20px;
+		display: none;
+	}
+}
+
+
+.form-check-input{
+	background-size: 60% ;
+	background-position: 60% center;
+}
+
+.btn{
+	box-shadow: none !important;
 }
