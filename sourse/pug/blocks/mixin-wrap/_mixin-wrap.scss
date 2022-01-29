@@ -1,32 +1,52 @@
- 
-	  
-.soc{
-	@include roww(10px, m);
+.soc {
+	@include roww(5px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		background-color: $light;
+		border-radius: 20px;
+		width: rem(50);
+		height: rem(40);
+		&:hover {
+			box-shadow: 0px 3px 7px rgba(30, 30, 30, 0.15);
+			// background-color: tint-color($light, 5%);
 			// opacity: .6 ;
+			.icon {
+				&-viber {
+					color: tint-color(#7940B5, $link-shade-percentage);
+				}
+				&-whatsapp {
+					color: tint-color(#40A86F, $link-shade-percentage);
+				}
+				&-telegram {
+					color: tint-color(#3BA4C4, $link-shade-percentage);
+				}
+			}
 		}
-		
 	}
-	.icon{
-		font-size: rem(30);
+	.icon {
+		@include mt;
+		font-size: rem(20);
+		&-viber {
+			color: #7940B5;
+		}
+		&-whatsapp {
+			color: #40A86F;
+		}
+		&-telegram {
+			color: #3BA4C4;
+		}
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,23 +54,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -64,15 +81,15 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
 	}
