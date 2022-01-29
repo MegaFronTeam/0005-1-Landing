@@ -295,6 +295,31 @@ function eventHandler() {
 		$(this).toggleClass("active").next().slideToggle();
 	})
 
+	$('.custom-select').select2({
+		dropdownParent: '.select-wrap',
+		// placeholder: 'Выберите отрасль'
+	});
+	$(document).on('change','.custom-select', function(){
+		console.log(this.value);
+		let card = this.value;
+		let cardEl = $(".sCatalog__col")
+		if (card=='all') {
+			$(".sCatalog__col:hidden").removeClass("d-none")
+		}
+		else{
+			cardEl.each(function(){ 
+				if ($(this).attr("data-type")== card) {
+					$(this).removeClass("d-none")
+				}
+				else{
+					
+					$(this).addClass("d-none")
+				}
+			})
+			}
+	})
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

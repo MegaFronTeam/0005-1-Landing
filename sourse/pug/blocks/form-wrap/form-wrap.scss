@@ -237,7 +237,13 @@ input::-webkit-inner-spin-button {
 .select2-container--default .select2-selection--single {
 	@extend .form-select;
 	height: auto !important;
-	padding-left: rem(10);
+	// padding-left: rem(10);
+	padding-left: rem(20);
+	border-color:#E5E3DE !important;
+}
+.select2-dropdown{
+	border-color:#E5E3DE !important;
+
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -245,5 +251,38 @@ input::-webkit-inner-spin-button {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-	display: none;
+	// display: none;
+	width: rem(60);
+	height: rem(60);
+	background-color: var(--bg, #{$primary});
+	border-radius: 10px;
+	top: 5px;
+	right: 5px;
+	@include mt;
+	b{
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		border: none;
+		margin-left: -8px;
+		margin-top: -8px;
+		transform: rotateX(var(--angle, 0));
+		@include mt;
+		// margin: 0;
+	}
+}
+.select2-container--open{
+	--bg: #F4F4F4;
+	--angle: 180deg
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+	background-color: $primary;
+}
+.select2-container--default .select2-results__option--selecte{
+	background-color: rgba(#F4F4F4, .5);
+}
+.select2-results__option{
+	padding-left: rem(20);
 }
