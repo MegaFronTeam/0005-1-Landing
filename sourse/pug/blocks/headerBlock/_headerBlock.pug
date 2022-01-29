@@ -2,9 +2,30 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
 			.row
-						
+				.col-lg-6
+					+b.section-title
+						h2 Только до 27 декабря! Программы 1С в облаке 
+							span.text-danger со скидкой 50%
+						p Повысить производительность, автоматизировать бизнес-процессы, управлять бизнесом и&nbsp;вести учёт помогут программы&nbsp;1С
+					+form-wrap
+						+e.input-wrap.form-group.input-btn-inner
+							+e.INPUT.input.form-control(name='text' type='text' placeholder='Введите ИНН компании')
+							button(type='submit')
+								span Проверить
+						.text-danger.fw-600 Проверьте, доступна&nbsp;ли вашей компании скидка&nbsp;50%
+				.col-lg-6.d-flex
+					+pic('headerBlock-1.png', '', 0)
+			+e.footer
+				.row
+					.col-lg-auto
+						+e.icon
+							+icon('info')
+					.col-lg
+						p Субсидия для компаний МСП Постановление Правительства от&nbsp;28.06.2021 года &#8470;&nbsp;1031
+					.col-lg-auto
+						+pic('head-logo-1.png', '', 0)
+					.col-lg-auto
+						+pic('head-logo-2.png', '', 0)
+
 	// end headerBlock
