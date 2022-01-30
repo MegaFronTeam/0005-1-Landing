@@ -1,22 +1,26 @@
 "use strict";
 const JSCCommon = { 
 	modalCall() {
-		const link = ".link-modal-js";
+		const link = '[data-fancybox="modal"], .link-modal-js';
 
 		Fancybox.bind(link, {
 			arrows: false,
-			infobar: false,
+			// infobar: false,
 			touch: false,
+			trapFocus: false,
+			placeFocusBack: false,
 			infinite: false,
 			dragToClose: false,
 			type: 'inline',
 			autoFocus: false,
+			groupAll: false,
+			groupAttr: false,
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
-				PREV: "Назад", 
-			}, 
-		}); 
+				PREV: "Назад",
+			},
+		});
 		document.querySelectorAll(".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();
@@ -294,6 +298,31 @@ function eventHandler() {
 	$(".dd-head-js").click(function(){
 		$(this).toggleClass("active").next().slideToggle();
 	})
+
+	$('.custom-select').select2({
+		dropdownParent: '.select-wrap',
+		// placeholder: 'Выберите отрасль'
+	});
+	$(document).on('change','.custom-select', function(){
+		console.log(this.value);
+		let card = this.value;
+		let cardEl = $(".sCatalog__col")
+		if (card=='all') {
+			$(".sCatalog__col:hidden").removeClass("d-none")
+		}
+		else{
+			cardEl.each(function(){ 
+				if ($(this).attr("data-type")== card) {
+					$(this).removeClass("d-none")
+				}
+				else{
+					
+					$(this).addClass("d-none")
+				}
+			})
+			}
+	})
+
 
 };
 if (document.readyState !== 'loading') {
