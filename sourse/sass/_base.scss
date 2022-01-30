@@ -548,8 +548,9 @@ iframe {
 
 .btn {
 	box-shadow: none !important;
-	&.disabled {
-		background-color: #EAEAEA;
-		border-color: #EAEAEA;
+	&.disabled,
+	&[disabled] {
+		background-color: #EAEAEA !important;
+		border-color: #EAEAEA !important;
 	}
 }
