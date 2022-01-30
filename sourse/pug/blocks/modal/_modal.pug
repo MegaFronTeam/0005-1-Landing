@@ -66,5 +66,14 @@ mixin modal()
 				+e.BUTTON.btn(type="submit") Оставить заявку
 				+policy()
 	// #modal-call-order-1
+
+	div(id="modal-call-sent"  style="display: none" )
+		+b.modal-win--order
+			+form-wrap
+				.text-center
+					h3 Заявка отправлена!
+					p Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время.
+				+e.btn.modal-close-js Закрыть
+	// #modal-call-order-1
 	
 	// end modals
