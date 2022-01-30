@@ -396,7 +396,7 @@ $line-height-lg: 2 !default;
 
 $h1-font-size: rem(48) !default;
 $h2-font-size: rem(48) !default;
-$h3-font-size: rem(36) !default;
+$h3-font-size: rem(24) !default;
 $h4-font-size: rem(20) !default;
 $h5-font-size: rem(18) !default;
 $h6-font-size: $font-size-base !default;
@@ -584,7 +584,7 @@ $btn-font-weight: 600 !default;
 $btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
 $btn-focus-width: $input-btn-focus-width !default;
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity: 0.65 !default;
+$btn-disabled-opacity: 1 !default;
 $btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
 
 $btn-link-color: $link-color !default;
@@ -648,7 +648,7 @@ $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $body-color !default;
-$input-border-color: $gray-400 !default;
+$input-border-color: #E5E3DE !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 

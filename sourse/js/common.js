@@ -33,7 +33,7 @@ const JSCCommon = {
 		function addData() {
 			linkModal.forEach(element => {
 				element.addEventListener('click', () => {
-					let modal = document.querySelector(element.getAttribute("href"));
+					let modal = document.querySelector('#' + element.getAttribute("data-src"));
 					const data = element.dataset;
 
 					function setValue(val, elem) {
@@ -45,7 +45,7 @@ const JSCCommon = {
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
-					setValue(data.title, '.ttu');
+					setValue(data.product, '.product');
 					setValue(data.text, '.after-headline');
 					setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
@@ -304,7 +304,7 @@ function eventHandler() {
 		// placeholder: 'Выберите отрасль'
 	});
 	$(document).on('change','.custom-select', function(){
-		console.log(this.value);
+		// console.log(this.value);
 		let card = this.value;
 		let cardEl = $(".sCatalog__col")
 		if (card=='all') {
@@ -316,14 +316,11 @@ function eventHandler() {
 					$(this).removeClass("d-none")
 				}
 				else{
-					
 					$(this).addClass("d-none")
 				}
 			})
 			}
 	})
-
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

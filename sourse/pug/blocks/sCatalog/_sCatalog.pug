@@ -23,12 +23,12 @@ mixin sCatalog(data)
 							+e.more(href=`#modal-${random}`).link-modal-js Подробнее
 							.row
 								.col
-									strong от 1890 
+									strong от 1890
 									| 
 									| руб./мес
 								.col-auto
-									+e.btn(href="#") Купить
-						div(id=`modal-${random}`  style="display: none" )
+									+e.btn(href="#" data-fancybox="modal" data-src="modal-call-check" data-product!= t) Купить
+						div(id=`modal-${random}` style="display: none" )
 							+b.modal-win--lg
 								.row 
 									.col-lg-auto.order-lg-last
@@ -38,7 +38,7 @@ mixin sCatalog(data)
 												| 
 												| руб./мес
 											.small.text-secondary Стоимость указана за&nbsp;одно рабочее место
-											+e.btn(href="#") Оставить заявку
+											+e.btn(href="#" data-fancybox="modal" data-src="modal-call-check" data-product!= t) Оставить заявку
 											.small Оставьте заявку и&nbsp;получите 30&nbsp;дней работы бесплатно
 									.col-lg
 										+e.title!= t 

@@ -1,0 +1,49 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sBanner/_sBanner.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAccordion/_sAccordion.pug
+//- include ../blocks/sConsult/_sConsult.pug
+//- include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Модальные окна'
+	title= title
+block pagecontent
+
+	.container
+		.col-auto.mb-2
+			a.btn.btn-primary(href="#" data-fancybox="modal" data-src="modal-call-check" data-product!= t) Купить(проверить ИНН (не заполнено))
+		.col-auto.mb-2
+			a.btn.btn-primary(href="#" data-fancybox="modal" data-src="modal-call-check-1" data-product!= t) Купить(проверить ИНН (заполнено не верно))
+		.col-auto.mb-2
+			a.btn.btn-primary(href="#" data-fancybox="modal" data-src="modal-call-check-2" data-product!= t) Купить(проверить ИНН (заполнено верно))
+		.col-auto.mb-2
+			a.btn.btn-primary(href="#" data-fancybox="modal" data-src="modal-call-order" data-product!= t) Оставить заявку (без скидки)
+		.col-auto.mb-2
+			a.btn.btn-primary(href="#" data-fancybox="modal" data-src="modal-call-order-1" data-product!= t) Оставить заявку (со скидкой)
+	//- +mob-mnu()
+	//- +header()
+	//- 	+top-nav()
+	//- +headerBlock()
+	//- +sCatalog()
+	//- +sAdvantages()
+	//- +sBanner()
+	//- +sAbout()
+	//- +sAccordion()
+	//- +sConsult()
+	//- +footer()
+	//- +topLine()
+	//- +sForm()
+	//- +sContact()
+
+
+
