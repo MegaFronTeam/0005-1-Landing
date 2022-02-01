@@ -18,7 +18,8 @@ mixin sCatalog(data)
 					- let random = Math.floor(Math.random(0, 1000) * Math.random(1, 99) * 25) + 65
 					+e.col.col-lg-4.col-md-6(data-type= type)
 						+b.card
-							+e.title!= t
+							+e.title
+								a(href=`#modal-${random}`).link-modal-js.text-body!= t
 							p!= p
 							+e.more(href=`#modal-${random}`).link-modal-js Подробнее
 							.row
