@@ -19,5 +19,12 @@
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		picture{
+			text-align: center;
+			img{
+				max-width: 70%;
+			}
+		}
+	}
 } // end.sConsult
